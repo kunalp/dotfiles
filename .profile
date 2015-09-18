@@ -27,4 +27,6 @@ export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+export PATH=~/Software/activator:$PATH
+
 export PATH=$PATH:~/.composer/vendor/bin
