@@ -22,11 +22,8 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
-
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
-export PATH=~/Software/activator:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
-export PATH=$PATH:~/.composer/vendor/bin
