@@ -1,18 +1,22 @@
-[color]
-	ui = true
 [user]
-	email = kunal@foolstack.com
 	name = Kunal Patel
+	email = kunal@foolstack.com
+
 [core]
 	editor = vim
-	autocrlf = input
 	excludesfile = ~/.gitignore
+
 [merge]
 	tool = meld
+
 [diff]
 	tool = meld
+
 [push]
 	default = current
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
 
 [alias]
     hist = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset%n%w(80,8,8)%s' --graph
@@ -20,4 +24,5 @@
     llog = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=iso
     changelog = log --pretty=format:'%Cgreen%d %Creset%s' --date=iso
     ls = log --pretty=format:'%C(yellow)%p..%h %C(white dim)%cd %<|(49,trunc)%an %C(reset)%s' --date=short --abbrev=8 --no-merges
-
+	mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+	undo = reset HEAD~
